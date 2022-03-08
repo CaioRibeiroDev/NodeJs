@@ -1,0 +1,79 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Introdução ao SOLID",
+    "description": "this is an API",
+    "version": "1.0.0",
+    "contact": {
+      "email": "caioribeirodev@gmail.com"
+    }
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "tags": ["users"],
+        "sumary": "Create User",
+        "description": "Create User",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "email": "emailexample@gmail.com",
+                  "name": "name example"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "user already exists"
+          }
+        }
+      },
+      "get": {
+        "tags": ["users"],
+        "sumary": "Get Users",
+        "description": "Get Users",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "user_id": {
+                    "type": "string"
+                  }
+                },
+                "example": {
+                  "user_id": "2820cc1a-48db-49d5-97f9-2bd5ad28026f"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "you not have permission"
+          }
+        }
+      }
+    }
+  }
+}
