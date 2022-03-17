@@ -1,0 +1,6 @@
+O que é ?
+  Ferramenta para criação de containers
+  Container: Ambiente isolado
+  Imagens: Instruções para criação de um container
+  O que "roda" localmente "roda" em produção
+  Mesmo SO, compartilhando recursos da máquina host
