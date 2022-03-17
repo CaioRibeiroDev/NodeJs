@@ -74,6 +74,38 @@
           }
         }
       }
+  },
+  "users/:user_id/admin": {
+    "patch": {
+      "tags": ["users"],
+      "sumary": "Turn User Admin",
+      "description": "Turn User Admin",
+      "requestBody": {
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user_id": {
+                  "type": "string"
+                }
+              },
+              "example": {
+                "user_id": "2820cc1a-48db-49d5-97f9-2bd5ad28026f"
+              }
+            }
+          }
+        }
+      },
+      "responses": {
+        "200": {
+          "description": ""
+        },
+        "400": {
+          "description": "you not have permission"
+        }
+      }
     }
   }
+}
 }
