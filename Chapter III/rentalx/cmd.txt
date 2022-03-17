@@ -1,0 +1,23 @@
+DOCKER
+
+Build: docker build -t rentx .
+Run: docker run -p 3333:3333 rentx
+Para app: docker stop (optimistic_heyrovsky - nome da aplicação)
+Remove app: docker rm optimistic_heyrovsky
+Logs: docker logs rentx -f
+List containers on/off: docker ps -a
+start: docker start nome_container
+
+Run docker compose: docker-compose up
+Run in background o container: docker-compose up -d
+stop app: docker-compose stop
+Remove all: docker-compose down
+force: docker-compose up --force-recreate
+
+-----------------------------------------------------
+
+MIGRATIONS
+
+Criar = yarn typeorm migration:create -n name
+Run migration: yarn typeorm migration:run
+Down migration: yarn typeorm migration:revert
