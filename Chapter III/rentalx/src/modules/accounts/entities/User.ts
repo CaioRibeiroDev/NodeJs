@@ -1,5 +1,5 @@
 import {v4 as uuidV4} from 'uuid';
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm'
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm';
 
 @Entity("users")
 class User {
@@ -10,7 +10,7 @@ class User {
   name: string;
 
   @Column()
-  username: string;
+  email: string;
 
   @Column()
   password: string;
